@@ -3,15 +3,14 @@ import { Routes, Route } from "react-router-dom";
 
 // import MainLayout from "components/MainLayout";
 import Home from "modules/Home/pages/Home";
+import Hi from "modules/Hello/pages/Hi";
 
 function App() {
   return (
     <Suspense>
       <Routes>
-        {/* <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} />
-        </Route> */}
-        <Route index element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<Hi />} />
       </Routes>
     </Suspense>
   );
